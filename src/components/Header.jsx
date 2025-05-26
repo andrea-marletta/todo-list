@@ -10,7 +10,7 @@ function Header() {
         <p><label for="addTasks">Add a task</label></p>
         <p>
           <input type="text" id="addTasks" name="task" className={styles.input}></input>
-          <button className={styles.button}>+ Add</button>
+          <button type="button" className={styles.button}>+ Add</button>
         </p>
       </form>
     </header>

@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import { useState } from 'react';
 import Todo from './components/Todo';
+import styles from './App.module.css'; 
 
 function App() {
   const [inputValue, setInputValue] = useState('');
@@ -26,15 +27,22 @@ function App() {
         setInputValue={setInputValue}
         onAddTodo={addTodo}      
       />
-      <ul>
-        {todos.map(todo => (
-          <Todo
-            key={todo.id}
-            id={todo.id}
-            text={todo.text}
-          />
-        ))}
-      </ul>
+      <main className={styles.main}>
+        <article className={styles.article}>
+          <header>
+            <h2>Tasks list</h2>
+          </header>
+          <ul>
+            {todos.map(todo => (
+              <Todo
+                key={todo.id}
+                id={todo.id}
+                text={todo.text}
+              />
+            ))}
+          </ul>
+        </article>
+      </main>
     </>
   );
 }

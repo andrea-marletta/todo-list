@@ -12,8 +12,7 @@ function Header({ inputValue, setInputValue, onAddTodo }) {
             id="addTasks" 
             name="task" 
             className={styles.input} 
-            onChange={(e) => setInputValue(e.target.value)}>
-          </input>
+            onChange={(e) => setInputValue(e.target.value)} />
           <button type="button" className={styles.button} onClick={onAddTodo}>
             + Add
           </button>

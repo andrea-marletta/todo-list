@@ -1,6 +1,6 @@
-function Todo( {id, text} ) {
+function Todo( {text} ) {
   return (
-    <li id={id}>
+    <li>
       {text}
       <button>Delete</button>
       <button>Edit</button>

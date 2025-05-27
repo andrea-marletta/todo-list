@@ -11,7 +11,7 @@ function App() {
     if (!inputValue.trim()) return;
 
     const newTodo = {
-      id: Date.now(),
+      key: Date.now(),
       text: inputValue
     }
 
@@ -35,8 +35,7 @@ function App() {
           <ul>
             {todos.map(todo => (
               <Todo
-                key={todo.id}
-                id={todo.id}
+                key={todo.key}
                 text={todo.text}
               />
             ))}

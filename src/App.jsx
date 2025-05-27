@@ -16,7 +16,6 @@ function App() {
     }
 
     setTodos(prevTodos => [...prevTodos, newTodo]);
-    setInputValue(e.target.value);
 
     todos.map(todo => {
       <Todo 

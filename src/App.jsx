@@ -7,24 +7,17 @@ function App() {
   const [todos, setTodos] = useState([]);
 
   const addTodo = () => {
-    if (inputValue.trim()) return;
+    if (!inputValue.trim()) return;
 
     const newTodo = {
       id: Date.now(),
-      key: Date.now(),
       text: inputValue
     }
 
     setTodos(prevTodos => [...prevTodos, newTodo]);
-
-    todos.map(todo => {
-      <Todo 
-        text={inputValue} 
-        id={id} 
-        key={key} 
-      />
-    })
-  }
+    setInputValue('');
+  };
+  
 
   return (
     <>
@@ -34,7 +27,13 @@ function App() {
         onAddTodo={addTodo}      
       />
       <ul>
-        {todos}
+        {todos.map(todo => (
+          <Todo
+            key={todo.id}
+            id={todo.id}
+            text={todo.text}
+          />
+        ))}
       </ul>
     </>
   );

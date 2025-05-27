@@ -1,6 +1,6 @@
-function Todo( {id, key, inputValue} ) {
+function Todo( {id, text} ) {
   return (
-    <li id={id} key={key}>{inputValue}</li>
+    <li id={id}>{text}</li>
   )
 }
 

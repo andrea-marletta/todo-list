@@ -5,14 +5,14 @@ function Header({ inputValue, setInputValue, onAddTodo }) {
     <header>
       <h1 className={styles.title}>TODO LIST</h1>
       <form className={styles.form}>
-        <p><label for="addTasks">Add a task</label></p>
+        <p><label htmlFor="addTasks">Add a task</label></p>
         <p>
           <input 
             type="text" 
             id="addTasks" 
             name="task" 
             className={styles.input} 
-            onChange={setInputValue(e.target.value)}>
+            onChange={(e) => setInputValue(e.target.value)}>
           </input>
           <button type="button" className={styles.button} onClick={onAddTodo}>
             + Add

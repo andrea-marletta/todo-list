@@ -11,6 +11,7 @@ function Header({ inputValue, setInputValue, onAddTodo }) {
             type="text" 
             id="addTasks" 
             name="task" 
+            value={inputValue}
             className={styles.input} 
             onChange={(e) => setInputValue(e.target.value)} />
           <button type="button" className={styles.button} onClick={onAddTodo}>

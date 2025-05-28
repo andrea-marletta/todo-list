@@ -32,6 +32,14 @@ function App() {
     );
   }
 
+  const handleSave = (newText, id) => {
+    setTodos(prevTodos =>
+      prevTodos.map(todo =>
+        todo.id === id ? { ...todo, text: newText } : todo
+      )
+    );
+  }
+
   return (
     <>
       <Header 
@@ -53,6 +61,7 @@ function App() {
                 onDelete={deleteTodo}
                 onToggle={toggleTodo}
                 completed={todo.completed}
+                onSave={handleSave}
               />
             ))}
           </ul>

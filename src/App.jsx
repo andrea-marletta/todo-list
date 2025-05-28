@@ -12,6 +12,7 @@ function App() {
 
     const newTodo = {
       key: Date.now(),
+      id: Date.now(),
       text: inputValue
     }
 
@@ -36,6 +37,7 @@ function App() {
             {todos.map(todo => (
               <Todo
                 key={todo.key}
+                id={todo.id}
                 text={todo.text}
               />
             ))}

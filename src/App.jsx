@@ -19,7 +19,10 @@ function App() {
     setTodos(prevTodos => [...prevTodos, newTodo]);
     setInputValue('');
   };
-  
+
+  const deleteTodo = (id) => {
+    setTodos(prev => prev.filter(todo => todo.id !== id));
+  } 
 
   return (
     <>
@@ -39,6 +42,7 @@ function App() {
                 key={todo.key}
                 id={todo.id}
                 text={todo.text}
+                onDelete={deleteTodo}
               />
             ))}
           </ul>

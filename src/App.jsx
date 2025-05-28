@@ -24,6 +24,13 @@ function App() {
     setTodos(prev => prev.filter(todo => todo.id !== id));
   } 
 
+  const toggleTodo = (id) => {
+    setTodos(prevTodos => prevTodos.map(todo => 
+      todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
+    );
+  }
+
   return (
     <>
       <Header 
@@ -43,6 +50,7 @@ function App() {
                 id={todo.id}
                 text={todo.text}
                 onDelete={deleteTodo}
+                onToggle={toggleTodo}
               />
             ))}
           </ul>

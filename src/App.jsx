@@ -13,7 +13,8 @@ function App() {
     const newTodo = {
       key: Date.now(),
       id: Date.now(),
-      text: inputValue
+      text: inputValue,
+      completed: false
     }
 
     setTodos(prevTodos => [...prevTodos, newTodo]);
@@ -51,6 +52,7 @@ function App() {
                 text={todo.text}
                 onDelete={deleteTodo}
                 onToggle={toggleTodo}
+                completed={todo.completed}
               />
             ))}
           </ul>

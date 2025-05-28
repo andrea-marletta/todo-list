@@ -1,6 +1,8 @@
+import styles from './Todo.module.css';
+
 function Todo( {text, id, onDelete} ) {
   return (
-    <li>
+    <li className={styles.active}>
       <input type="checkbox" id={id} />
       {text}
       <button onClick={() => onDelete(id)}>Delete</button>

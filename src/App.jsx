@@ -2,6 +2,7 @@ import Header from './components/Header';
 import { useState, useRef, useEffect } from 'react';
 import Todo from './components/Todo';
 import styles from './App.module.css'; 
+import usePrevious from './hooks/usePrevious';
 
 function App() {
   const [inputValue, setInputValue] = useState('');
@@ -40,14 +41,6 @@ function App() {
         todo.id === id ? { ...todo, text: newText } : todo
       )
     );
-  }
-  
-  function usePrevious(value) {
-    const ref = useRef();
-    useEffect(() => {
-      ref.current = value;
-    }, [value]);
-    return ref.current;
   }
 
   useEffect(() => {

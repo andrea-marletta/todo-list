@@ -1,19 +1,12 @@
 import styles from './Todo.module.css';
 import { useState, useRef, useEffect } from 'react';
+import usePrevious from '../hooks/usePrevious';
 
 function Todo( { text, id, onDelete, completed, onToggle, onSave } ) {
   const [isEditing, setIsEditing] = useState(false);
   const [editText, setEditText] = useState(text);
   const editButtonRef = useRef(null);
   const wasEditing = usePrevious(isEditing);
-
-  function usePrevious(value) {
-    const ref = useRef();
-    useEffect(() => {
-      ref.current = value;
-    }, [value]);
-    return ref.current;
-  }
 
   useEffect(() => {
     if (wasEditing && !isEditing) {

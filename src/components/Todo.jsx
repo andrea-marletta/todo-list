@@ -7,7 +7,7 @@ function Todo( { text, id, onDelete, completed, onToggle, onSave } ) {
 
   return (
     <li className={completed ? styles.completed : styles.active}>
-      <input type="checkbox" id={id} onClick={() => onToggle(id)} />
+      <input type="checkbox" id={id} onChange={() => onToggle(id)} />
       {text}
       <button onClick={() => onDelete(id)}>Delete</button>
       <button onClick={() => setIsEditing(true)}>Edit</button>

@@ -6,9 +6,16 @@ import usePrevious from './hooks/usePrevious';
 
 function App() {
   const [inputValue, setInputValue] = useState('');
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(() => {
+    try {
+      const saved = localStorage.getItem('todos');
+      return saved ? JSON.parse(saved) : [];
+    } catch (e) {
+      return [];
+    }
+  });
   const taskListHeadingRef = useRef(null);
-  const prevTodosLength = usePrevious(todos.length)
+  const prevTodosLength = usePrevious(todos.length);
 
   const addTodo = () => {
     if (!inputValue.trim()) return;
@@ -47,7 +54,15 @@ function App() {
     if (prevTodosLength > todos.length) {
       taskListHeadingRef.current?.focus();
     }
-  }, [prevTodosLength, todos.length])
+  }, [prevTodosLength, todos.length]);
+
+  useEffect(() => {
+    if (todos.length) {
+      localStorage.setItem('todos', JSON.stringify(todos));
+    } else {
+      localStorage.removeItem('todos');
+    }
+  }, [todos]);
 
   return (
     <>

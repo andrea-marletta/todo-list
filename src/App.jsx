@@ -22,7 +22,6 @@ function App() {
 
     const newTodo = {
       key: Date.now(),
-      id: Date.now(),
       text: inputValue,
       completed: false
     }
@@ -79,7 +78,7 @@ function App() {
           <ul>
             {todos.map(todo => (
               <Todo
-                key={todo.key}
+                key={todo.id}
                 id={todo.id}
                 text={todo.text}
                 onDelete={deleteTodo}

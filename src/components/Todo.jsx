@@ -16,8 +16,14 @@ function Todo( { text, id, onDelete, completed, onToggle, onSave } ) {
 
   return (
     <li>
-      <input type="checkbox" id={id} onChange={() => onToggle(id)} 
-        aria-label={`Toggle completition status of "${text}"`} checked={completed} />
+      <input 
+        type="checkbox" 
+        id={id} 
+        onChange={() => onToggle(id)} 
+        aria-label={`Toggle completition status of "${text}"`} 
+        checked={completed} 
+        className={styles.checkbox}
+      />
       <span className={completed && styles.completed}>{text}</span>
       <button onClick={() => onDelete(id)}>Delete</button>
       <button onClick={() => setIsEditing(true)} ref={editButtonRef}>Edit</button>

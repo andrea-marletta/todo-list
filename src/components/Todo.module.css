@@ -1,3 +1,9 @@
 .completed {
   text-decoration: line-through;
 }
+
+.checkbox {
+  transform: scale(2);
+  transform-origin: left;
+  margin-right: 5vw;
+}

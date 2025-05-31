@@ -17,8 +17,12 @@ h1, h2 {
   line-height: 1.2;
 }
 
-input, button, textarea, select {
+input, button {
   font: inherit;
+}
+
+button {
+  padding: 0.5rem 1rem;
 }
 
 ul {

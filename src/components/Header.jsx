@@ -12,19 +12,17 @@ function Header({ inputValue, setInputValue, onAddTodo }) {
           }
         }
       >
-        <p><label htmlFor="addTasks">Add a task</label></p>
-        <p>
-          <input 
-            type="text" 
-            id="addTasks" 
-            name="task" 
-            value={inputValue}
-            className={styles.input} 
-            onChange={(e) => setInputValue(e.target.value)} />
-          <button type="submit" className={styles.button}>
-            + Add
-          </button>
-        </p>
+        <label htmlFor="addTasks">Add a task</label>
+        <input 
+          type="text" 
+          id="addTasks" 
+          name="task" 
+          value={inputValue}
+          className={styles.input} 
+          onChange={(e) => setInputValue(e.target.value)} />
+        <button type="submit" className={styles.button}>
+          + Add
+        </button>
       </form>
     </header>
   );

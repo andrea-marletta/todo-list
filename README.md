@@ -16,7 +16,7 @@ A simple, modern Todo List application built with **React** and **Vite**. Easily
 
 ## Demo
 
-> 
+> https://andrea-marletta.github.io/todo-list/
 
 ---
 

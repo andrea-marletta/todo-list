@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import Todo from './components/Todo';
 import styles from './App.module.css'; 
 import usePrevious from './hooks/usePrevious';
+import Footer from './components/Footer';
 
 function App() {
   const [inputValue, setInputValue] = useState('');
@@ -90,6 +91,7 @@ function App() {
           </ul>
         </article>
       </main>
+      <Footer />
     </>
   );
 }

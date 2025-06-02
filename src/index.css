@@ -36,3 +36,7 @@ ul {
 p, span, input, button, label {
   font-size: 1.25rem;
 }
+
+a {
+  color: #fff;
+}

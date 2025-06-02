@@ -11,9 +11,13 @@ function Footer() {
       .
       </p>
       <p>
-        <a href="https://github.com/andrea-marletta/todo-list" target="_blank" rel="noopener noreferrer">
-          View source on GitHub.
+        <a 
+          href="https://github.com/andrea-marletta/todo-list" 
+          target="_blank" 
+          rel="noopener noreferrer">
+          View source on GitHub
         </a>
+        .
       </p>
       <p>Built with React.</p>
       <p>This site does not collect personal data or use tracking cookies.</p>

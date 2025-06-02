@@ -72,7 +72,7 @@ function App() {
         onAddTodo={addTodo}      
       />
       <main className={styles.main}>
-        <article className={styles.article}>
+        <section className={styles.section}>
           <header>
             <h2 ref={taskListHeadingRef} tabIndex="-1">Tasks list</h2>
           </header>
@@ -89,7 +89,7 @@ function App() {
               />
             ))}
           </ul>
-        </article>
+        </section>
       </main>
       <Footer />
     </>

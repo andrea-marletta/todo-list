@@ -72,7 +72,7 @@ function App() {
         onAddTodo={addTodo}      
       />
       <main className={styles.main}>
-        <section className={styles.section}>
+        <section>
           <header>
             <h2 ref={taskListHeadingRef} tabIndex="-1">Tasks list</h2>
           </header>

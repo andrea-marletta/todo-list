@@ -1,9 +1,15 @@
-.div {
+.taskInfo {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.taskContent {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 0.5rem;
+  word-break: break-word;
 }
 
 .completed {
@@ -11,9 +17,11 @@
 }
 
 .checkbox {
-  transform: scale(2);
-  transform-origin: left;
-  margin-right: 1rem;
+  transform: scale(3);
+  transform-origin: left top;
+  margin-right: 2.25rem;
+  align-self: start;
+  margin-top: 0.3rem;
 }
 
 .delete {

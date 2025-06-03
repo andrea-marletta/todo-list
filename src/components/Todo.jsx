@@ -16,7 +16,7 @@ function Todo( { text, id, onDelete, completed, onToggle, onSave } ) {
 
   return (
     <li>
-      <div className={styles.div}>
+      <div className={styles.taskInfo}>
         <input 
           type="checkbox" 
           id={id} 
@@ -25,9 +25,11 @@ function Todo( { text, id, onDelete, completed, onToggle, onSave } ) {
           checked={completed} 
           className={styles.checkbox}
         />
-        <span className={completed && styles.completed}>{text}</span>
-        <button onClick={() => onDelete(id)} className={styles.delete}>Delete</button>
-        <button onClick={() => setIsEditing(true)} ref={editButtonRef}>Edit</button>
+        <div className={styles.taskContent}>
+          <span className={completed && styles.completed}>{text}</span>
+          <button onClick={() => onDelete(id)} className={styles.delete}>Delete</button>
+          <button onClick={() => setIsEditing(true)} ref={editButtonRef}>Edit</button>
+        </div>
       </div>
       {isEditing && (
         <form

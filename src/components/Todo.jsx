@@ -40,8 +40,8 @@ function Todo( { text, id, onDelete, completed, onToggle, onSave } ) {
           }}
           className={styles.form}
         >
-          <label htmlFor={`{editInput-${id}}`}>Edit task</label>
-          <input id={`{editInput-${id}}`} type="text" value={editText} 
+          <label htmlFor={`editInput-${id}`}>Edit task</label>
+          <input id={`editInput-${id}`} type="text" value={editText} 
             onChange={(e) =>
               setEditText(e.target.value)
             } />

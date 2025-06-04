@@ -57,11 +57,15 @@ function App() {
   }, [prevTodosLength, todos.length]);
 
   useEffect(() => {
-    if (todos.length) {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
+  
+  useEffect(() => {
+    const saveOnUnload = () => {
       localStorage.setItem('todos', JSON.stringify(todos));
-    } else {
-      localStorage.removeItem('todos');
-    }
+    };
+    window.addEventListener('beforeunload', saveOnUnload);
+    return () => window.removeEventListener('beforeunload', saveOnUnload);
   }, [todos]);
 
   return (

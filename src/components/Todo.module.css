@@ -1,7 +1,12 @@
+.list {
+  margin-bottom: 0.5rem;
+}
+
 .taskInfo {
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 2.25rem;
+  align-items: center;
 }
 
 .taskContent {
@@ -9,7 +14,6 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 0.5rem;
   word-break: break-word;
 }
 
@@ -18,10 +22,8 @@
 }
 
 .checkbox {
-  transform: scale(3);
-  transform-origin: left top;
-  align-self: start;
-  margin-top: 0.3rem;
+  transform: scale(2);
+  transform-origin: left;
 }
 
 .delete {

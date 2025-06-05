@@ -15,7 +15,7 @@ function Todo( { text, id, onDelete, completed, onToggle, onSave } ) {
   }, [wasEditing, isEditing]);
 
   return (
-    <li>
+    <li className={styles.list}>
       <div className={styles.taskInfo}>
         <input 
           type="checkbox" 

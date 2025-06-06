@@ -1,0 +1,30 @@
+.checkbox-wrapper {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.checkbox-custom {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid #555;
+  display: inline-block;
+  position: relative;
+}
+
+.checkbox-input:checked + .checkbox-custom {
+  background-color: #298099;
+  border-color: #298099;
+}
+
+.checkbox-input:focus-visible + .checkbox-custom {
+  outline: 2px solid #2684ff;
+  outline-offset: 2px;
+}

@@ -1,6 +1,7 @@
 import styles from './Todo.module.css';
 import { useState, useRef, useEffect } from 'react';
 import usePrevious from '../hooks/usePrevious';
+import CustomCheckbox from './CustomCheckbox';
 
 function Todo( { text, id, onDelete, completed, onToggle, onSave } ) {
   const [isEditing, setIsEditing] = useState(false);
@@ -17,13 +18,11 @@ function Todo( { text, id, onDelete, completed, onToggle, onSave } ) {
   return (
     <li className={styles.list}>
       <div className={styles.taskInfo}>
-        <input 
-          type="checkbox" 
+        <CustomCheckbox 
           id={id} 
-          onChange={() => onToggle(id)} 
-          aria-label={`Toggle completition status of "${text}"`} 
-          checked={completed} 
-          className={styles.checkbox}
+          onToggle={onToggle} 
+          completed={completed} 
+          text={text} 
         />
         <div className={styles.taskContent}>
           <span className={completed && styles.completed}>{text}</span>

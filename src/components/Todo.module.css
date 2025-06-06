@@ -5,7 +5,7 @@
 .taskInfo {
   display: grid;
   grid-template-columns: auto 1fr;
-  column-gap: 2.25rem;
+  column-gap: 0.5rem;
   align-items: center;
 }
 
@@ -19,11 +19,6 @@
 
 .completed {
   text-decoration: line-through;
-}
-
-.checkbox {
-  transform: scale(2);
-  transform-origin: left;
 }
 
 .delete {

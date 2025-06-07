@@ -27,4 +27,5 @@
 .checkbox-input:focus-visible + .checkbox-custom {
   outline: 2px solid #2684ff;
   outline-offset: 2px;
+  box-shadow: 0 0 5px 2px rgba(38, 132, 255, 0.6);
 }

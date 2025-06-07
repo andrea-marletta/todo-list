@@ -7,6 +7,7 @@
   grid-template-columns: auto 1fr;
   column-gap: 0.5rem;
   align-items: center;
+  margin-bottom: 0.5rem
 }
 
 .taskContent {

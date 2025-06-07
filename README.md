@@ -7,10 +7,11 @@ A simple, modern Todo List application built with **React** and **Vite**. Easily
 ## Features
 
 - 📝 Add, edit, and delete tasks
-- ✅ Mark tasks as completed or pending
+- ✅ Mark tasks as completed or pending with **custom-designed checkboxes**
 - 💾 Persistent data storage (localStorage)
 - ⚡ Fast development and build with Vite
 - 🎨 Responsive and minimal UI with custom CSS
+- 📱 Progressive Web App (PWA) support for offline use and installation
 
 ---
 
@@ -81,6 +82,12 @@ The production-ready files will be in the `dist` directory.
 ├── package.json
 └── vite.config.js
 ```
+
+---
+
+## Site Icon
+
+The site icon was generated using **[DALL·E](https://openai.com/dall-e/)**, OpenAI’s AI image generation tool.
 
 ---
 

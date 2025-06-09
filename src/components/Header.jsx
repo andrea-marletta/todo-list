@@ -21,7 +21,7 @@ function Header({ inputValue, setInputValue, onAddTodo }) {
           className={styles.input} 
           onChange={(e) => setInputValue(e.target.value)} />
         <button type="submit">
-          + Add
+          Add
         </button>
       </form>
     </header>
